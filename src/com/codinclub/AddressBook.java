@@ -65,7 +65,7 @@ public class AddressBook {
         System.out.println("Enter the contact details:");
         System.out.println("Enter first name:");
         String firstName = scanner.nextLine();
-        System.out.println("Enter last name");
+       System.out.println("Enter last name");
         String lastName = scanner.nextLine();
         System.out.println("Enter city");
         String city = scanner.nextLine();
@@ -80,4 +80,10 @@ public class AddressBook {
 
         contacts.put(firstName.toLowerCase(), new Contact(firstName, lastName, city, state, zip, phoneNumber, email));
     }
+    public void deleteContact() {
+        System.out.println("Enter first name of person you want to remove");
+        String firstName = scanner.nextLine();
+        contacts.remove(firstName.toLowerCase());
+    }
 }
+
