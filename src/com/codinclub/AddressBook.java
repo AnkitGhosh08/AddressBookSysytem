@@ -1,15 +1,17 @@
 package com.codinclub;
 
 import java.util.*;
-//import java.util.Scanner;
 
 public class AddressBook {
     private Contact[] contacts;
     private static Scanner scanner = new Scanner(System.in);
     private int noOfContacts;
-    public AddressBook() {
+    private int addressBookId;
+
+    public AddressBook(int id) {
         this.contacts = new Contact[10];
         this.noOfContacts = 0;
+        this.addressBookId = id;
     }
     public void editContact() {
         System.out.println("Enter phone of person you want edit:");
